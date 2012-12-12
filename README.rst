@@ -1,22 +1,29 @@
-==========
 naturalcropping
-==========
-:Info:Natural cropping backend for sorl-thumbnail
-:Version: 0.0.1
-:Author: Alexey Boriskin (http://github.com/uruz)
+===============
+
++--------+--------------------------------------------+
+| Info   | Natural cropping backend for sorl-thumbnail|
++--------+--------------------------------------------+
+| Version| 0.0.1                                      |
++--------+--------------------------------------------+
+| Author |Alexey Boriskin (http://github.com/uruz)    |
++--------+--------------------------------------------+
 
 Features
 ========
 
 Installation
 ============
-* Install from github: 
-	pip install -e git://github.com/uruz/naturalcropping.git#egg=naturalcropping
-	
-* Then put the following line in your `settings.py`:
-    THUMBNAIL_ENGINE = 'naturalcropping.Engine'	
+* Install from github: ::
 
-* Then use sorl-thumbnail as usual with crop="natural" setting. Example: 
+    pip install -e git://github.com/uruz/naturalcropping.git#egg=naturalcropping
+	
+* Then put the following line in your `settings.py`: ::
+
+    THUMBNAIL_ENGINE = 'naturalcropping.engine.Engine'	
+
+* Then use sorl-thumbnail as usual with crop="natural" setting. Example: ::
+
     {% thumbnail picture.image "100x100" crop="natural" as img %}
     	<img src="{{img.url}}" alt="image" />
     {% endthumbnail %}
